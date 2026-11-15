@@ -33,6 +33,9 @@
                 width: 99vw;
                 height: 98vh;
             }
+            .mobilebig {
+                zoom: 400%;
+            }
         </style>
         <script>
             let cheese;
@@ -41,10 +44,17 @@
                 t.innerHTML = htmlString.trim();
                 return t.content.firstElementChild;
             }
+            console.log(navigator.userAgent);
+            function chezz() {
+                if (navigator.userAgent.includes('Mobile')) {
+                    console.log("zoomin'");
+                    document.getElementById("window0").classList.add('mobilebig');
+                }
+            }
         </script>
         <link rel="stylesheet" href="https://unpkg.com/98.css@0.1.21/dist/98.css">
     </head>
-    <body>
+    <body onload="chezz()">
         <div class="window" id="window0">
             <div class="title-bar">
                 <div class="title-bar-text">Aeryli's site</div>
