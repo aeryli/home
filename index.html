@@ -29,16 +29,20 @@
                 width: calc(fit-content + 10px);
                 height: calc(fit-content + 10px)
             }
+            .fullscreens {
+                width: 100%;
+                height: 100%;
+            }
         </style>
     </head>
     <body>
         <link rel="stylesheet" href="https://unpkg.com/98.css@0.1.21/dist/98.css">
-        <div class="window">
+        <div class="window" id="window0">
             <div class="title-bar">
                 <div class="title-bar-text">Aeryli's site</div>
                     <div class="title-bar-controls">
                     <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
+                    <button aria-label="Maximize" onclick="document.getElementById('window0').classList.toggle('fullscreens');"></button>
                     <button aria-label="Close" onclick="window.location.href = 'https://github.com/aeryli/';"></button>
                 </div>
             </div>
