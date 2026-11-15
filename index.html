@@ -34,14 +34,22 @@
                 height: 98vh;
             }
         </style>
+        <script>
+            let cheese;
+            function strToE(htmlString) {
+                let t = document.createElement('template');
+                t.innerHTML = htmlString.trim();
+                return t.content.firstElementChild;
+            }
+        </script>
+        <link rel="stylesheet" href="https://unpkg.com/98.css@0.1.21/dist/98.css">
     </head>
     <body>
-        <link rel="stylesheet" href="https://unpkg.com/98.css@0.1.21/dist/98.css">
         <div class="window" id="window0">
             <div class="title-bar">
                 <div class="title-bar-text">Aeryli's site</div>
                 <div class="title-bar-controls">
-                    <button aria-label="Minimize" onclick="let cheese = document.body.innerText; document.body.innerText = atob('PGJ1dHRvbiBhcmlhLWxhYmVsPSJNaW5pbWl6ZSIgb25jbGljaz0iZG9jdW1lbnQuYm9keS5pbm5lclRleHQgPSBjaGVlc2UiPjwvYnV0dG9uPg==')"></button>
+                    <button aria-label="Minimize" onclick="cheese = document.body.innerHTML; document.body.innerText = ''; document.body.appendChild(strToE(atob('PGJ1dHRvbiBhcmlhLWxhYmVsPSJNaW5pbWl6ZSIgb25jbGljaz0iZG9jdW1lbnQuYm9keS5pbm5lclRleHQgPSAnJzsgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChzdHJUb0UoY2hlZXNlKSk7Ij5TaG93PC9idXR0b24+')));"></button>
                     <button aria-label="Maximize" onclick="document.getElementById('window0').classList.toggle('fullscreens');"></button>
                     <button aria-label="Close" onclick="window.location.href = 'https://github.com/aeryli/';"></button>
                 </div>
