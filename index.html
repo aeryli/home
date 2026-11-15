@@ -9,7 +9,7 @@
                 height: 100vh;
                 margin: 0;
                 padding: 0;
-                background-image: url("https://www.aeryli.win/fish.gif");
+                background-image: url("https://aeryli.win/fish.gif");
                 background-repeat: repeat;
                 animation: scrollPattern 4s linear infinite;
                 display: grid;
@@ -25,12 +25,15 @@
                     background-position: -360px -247px; 
                 }
             }
-
+            .window {
+                width: calc(fit-content + 10px);
+                height: calc(fit-content + 10px)
+            }
         </style>
     </head>
     <body>
         <link rel="stylesheet" href="https://unpkg.com/98.css@0.1.21/dist/98.css">
-        <div class="window" style="width: 50vw; height: 55vh;">
+        <div class="window">
             <div class="title-bar">
                 <div class="title-bar-text">Aeryli's site</div>
                     <div class="title-bar-controls">
