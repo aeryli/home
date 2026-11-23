@@ -29,7 +29,7 @@
 			return {
 				id: 'blocklink2',
 				name: "Aeryli's blocklink",
-				author: ['aeryli'],
+				author: ['aeryli', 'https://github.com/aeryli/'],
 				description: 'Multiplayer scratch editor.',
         icon: 'https://aeryli.win/ico.png',
         //screenshots: [this.GetFile("screenshot.png")],
