@@ -4,18 +4,24 @@
 	'use strict';
 
 	class MyAddon {
+		options = {
+			enabled: true,
+			showNotifications: {
+				type: 'boolean',
+				label: 'Show notifications',
+				value: true
+			}
+		}
+
+		doSomethingCool() {
+			// Check the option's current value
+			if (this.options.showNotifications.value) {
+				alert('Something cool just happened!');
+			}
+		}
 		constructor() {
 			// Variables and stuff
 		}
-    
-    options = {
-      enabled: true,
-      username: {
-          type: 'string',
-          label: 'Default username:',
-          value: "User"
-      }
-    }
 
 
 		// Returns metadata about your addon
