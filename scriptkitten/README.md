@@ -1,2 +1,3 @@
 ![ScriptKitten icon](./assets/favicon.ico)
 ## ScriptKitten
+[./docs/](./docs/)
