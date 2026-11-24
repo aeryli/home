@@ -5,7 +5,7 @@
     <title>Community Addons - ScriptKitten</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="link" href="/ScriptKitten/images/icon.png">
+    <link rel="link" href="/scriptkitten/images/icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -309,8 +309,8 @@
         <div class="container">
             <h1>ScriptKitten</h1>
             <nav>
-                <a href="/ScriptKitten/">Home</a>
-                <a href="/ScriptKitten/docs">Creation Docs</a>
+                <a href="/scriptkitten/">Home</a>
+                <a href="/scriptkitten/docs">Creation Docs</a>
             </nav>
         </div>
     </header>
@@ -399,7 +399,7 @@
             }
             async function loadAddons() {
                 try {
-                    repoUrl = 'https://api.github.com/repos/aeryli/ScriptKitten/contents/docs/addons/';
+                    repoUrl = 'https://api.github.com/repos/aeryli/scriptkitten/contents/docs/addons/';
                     const response = await fetch(repoUrl);
                     if (!response.ok) throw new Error(`GitHub API error: ${response.status}`);
                     const files = await response.json();
@@ -409,7 +409,7 @@
                         return;
                     }
                     const scriptDataPromises = jsFiles.map(async (file) => {
-                        const scriptUrl = `https://aeryli.win/ScriptKitten/docs/addons/${file.name}`;
+                        const scriptUrl = `https://aeryli.win/scriptkitten/docs/addons/${file.name}`;
                         try {
                             const scriptResponse = await fetch(scriptUrl);
                             if (!scriptResponse.ok) return null;
@@ -483,7 +483,7 @@
                 }
                 if (copyButton) {
                     const filename = copyButton.dataset.filename;
-                    const url = `https://aeryli.win/ScriptKitten/docs/addons/${filename}`;
+                    const url = `https://aeryli.win/scriptkitten/docs/addons/${filename}`;
                     navigator.clipboard.writeText(url).then(() => {
                         const originalText = copyButton.textContent;
                         copyButton.textContent = 'Copied!';
